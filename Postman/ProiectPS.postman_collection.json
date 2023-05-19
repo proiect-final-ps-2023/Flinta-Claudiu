@@ -1,0 +1,450 @@
+{
+	"info": {
+		"_postman_id": "8701e0d7-7a2f-414a-95a1-7111932e83c7",
+		"name": "ProiectPS",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "26658570"
+	},
+	"item": [
+		{
+			"name": "FindHotelByCountry",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8081/hotel/Romania",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"hotel",
+						"Romania"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "FindAllHotels",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8081/hotel",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"hotel"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "FindHotelById",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "GetReservationListById",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "GetRoomListById",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8081/hotel/1/room",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"hotel",
+						"1",
+						"room"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DeleteHotelById",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8081/hotel/delete/254",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"hotel",
+						"delete",
+						"254"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "AddHotel",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Aro Palace\",\r\n    \"country\": \"Romania\",\r\n    \"region\": \"Brasov\",\r\n    \"address\": \"Street Bulevardul Eroilor, no. 1\",\r\n    \"phone\": 39,\r\n    \"email\": \"hotelaro@office.com\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8081/hotel/add",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"hotel",
+						"add"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "AddNewUser",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "username",
+							"value": "",
+							"type": "string"
+						},
+						{
+							"key": "password",
+							"value": "hr",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"firstName\": \"George\",\r\n    \"lastName\": \"Flinta\",\r\n    \"email\": \"geeorge.flinta@yahoo.com\",\r\n    \"telephone\": 75498732,\r\n    \"password\": \"1234\",\r\n    \"type\": 1,\r\n    \"status\": 1\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8081/user/add",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"user",
+						"add"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "LogIn",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\": \"f.ovidiu@gmail.com\",\r\n    \"password\": \"1234\"\r\n}\r\n\r\n\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8081/user/login",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"user",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "AddRoom",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Room1\",\r\n    \"pricePerNight\": 35.65,\r\n    \"hotelId\": 2\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8081/room/add",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"room",
+						"add"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DeleteRoom",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "localhost:8081/room/delete/5",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"room",
+						"delete",
+						"5"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ChangePassword",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "\r\n    \"email\": \"geeorge.flinta@yahoo.com\",\r\n    \"oldPass\": \"1234\",\r\n    \"newPass\": \"5555\"\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8081/user/change",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"user",
+						"change"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "UpdatePricePerNight",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"url": {
+					"raw": "localhost:8081/room/update?id=6&price=1234.54",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"room",
+						"update"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "6"
+						},
+						{
+							"key": "price",
+							"value": "1234.54"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "FindHotelByRegion",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8081/hotel/Brasov/region",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"hotel",
+						"Brasov",
+						"region"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "FindAllRooms",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "FindAllUsers",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8081/user",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"user"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "FindAllRoomsForCertainHotel",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "EmailTest",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "localhost:8081/send-email/2",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"send-email",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DeleteReservation",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "localhost:8081/reservation/delete/152",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"reservation",
+						"delete",
+						"152"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetReservationListForUser",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8081/reservation/findReservations?email=claudiu.co.flinta@gmail.com",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"reservation",
+						"findReservations"
+					],
+					"query": [
+						{
+							"key": "email",
+							"value": "claudiu.co.flinta@gmail.com"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "New Request",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "AddHotelReview",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		}
+	]
+}
